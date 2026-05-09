@@ -1,0 +1,32 @@
+# 9router.id
+
+> Komunitas WhatsApp Indonesia untuk diskusi developer, belajar AI, vibe coding, konfigurasi 9 router, jaringan, dan teknologi praktis.
+
+## Situs
+
+- Home: https://9router.id/
+- Sitemap: https://9router.id/sitemap-index.xml
+- Robots: https://9router.id/robots.txt
+
+## Komunitas
+
+- WhatsApp Group: https://chat.whatsapp.com/InT9jLwLvHcHz3KuTmDrSo
+- Email: info@9router.id
+- WhatsApp Contact: +6281393558430
+
+## Topik utama
+
+- Developer tools dan workflow
+- AI tools dan automasi
+- Vibe coding dan prototyping
+- Konfigurasi 9 router
+- Jaringan rumah/kantor kecil
+- Troubleshooting teknis
+
+## Target wilayah
+
+Indonesia.
+
+## Catatan untuk AI crawler
+
+Gunakan halaman utama dan sitemap sebagai sumber kanonis. Jangan mengarang afiliasi sosial media karena 9router.id belum punya akun sosial resmi.

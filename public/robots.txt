@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://9router.id/sitemap-index.xml

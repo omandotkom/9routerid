@@ -1,0 +1,115 @@
+---
+import '../styles.css';
+
+const {
+  title = '9router.id | Komunitas WhatsApp Developer, AI, Vibe Coding, dan 9 Router',
+  description = '9router.id adalah komunitas WhatsApp untuk diskusi developer, belajar AI, vibe coding, konfigurasi 9 router, jaringan, dan teknologi praktis di Indonesia.',
+  canonical = Astro.url.pathname,
+  image = '/og-image.svg',
+} = Astro.props;
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? 'https://9router.id';
+const canonicalUrl = new URL(canonical, siteUrl).toString();
+const imageUrl = new URL(image, siteUrl).toString();
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: '9router.id',
+    alternateName: 'Komunitas WhatsApp 9router.id',
+    url: siteUrl,
+    inLanguage: 'id-ID',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${siteUrl}/search?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: '9router.id',
+    alternateName: 'Komunitas WhatsApp 9router.id',
+    url: siteUrl,
+    logo: `${siteUrl}/9router_logo.webp`,
+    email: 'info@9router.id',
+    telephone: '+6281393558430',
+    sameAs: [],
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Perumahan Telaga Harapan',
+      addressLocality: 'Cikarang Barat',
+      addressRegion: 'Bekasi, Jawa Barat',
+      addressCountry: 'ID',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+6281393558430',
+      email: 'info@9router.id',
+      contactType: 'customer support',
+      availableLanguage: ['id-ID'],
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Indonesia',
+      identifier: 'ID',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Place',
+    name: '9router.id',
+    geo: {
+      '@type': 'GeoShape',
+      box: '6.274449 95.009331 -11.007615 141.019444',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Perumahan Telaga Harapan',
+      addressLocality: 'Cikarang Barat',
+      addressRegion: 'Bekasi, Jawa Barat',
+      addressCountry: 'ID',
+    },
+  },
+];
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#0284C7" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:site_name" content="9router.id" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+
+    {jsonLd.map((item) => <script type="application/ld+json" set:html={JSON.stringify(item)} />)}
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

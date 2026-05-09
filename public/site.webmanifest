@@ -1,0 +1,21 @@
+{
+  "name": "9router.id",
+  "short_name": "9router.id",
+  "description": "Komunitas WhatsApp developer, AI, vibe coding, dan 9 router di Indonesia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0284C7",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

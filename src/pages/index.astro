@@ -4,10 +4,10 @@ import Layout from '../layouts/Layout.astro';
 const whatsappUrl = 'https://chat.whatsapp.com/InT9jLwLvHcHz3KuTmDrSo';
 
 const topics = [
-  ['Developer', 'Bahas web, backend, tooling, deploy, debug, dan praktik kerja harian developer.'],
-  ['AI & Automation', 'Belajar pakai AI untuk riset, coding, konten, workflow, dan eksperimen produk.'],
-  ['Vibe Coding', 'Ngulik ide cepat, prototyping, prompt, agent coding, dan shipping project kecil.'],
-  ['Config 9 Router', 'Diskusi setup router, jaringan rumah/kantor kecil, troubleshooting, dan optimasi koneksi.'],
+  ['Developer', '💻', 'Bahas web, backend, tooling, deploy, debug, dan praktik kerja harian developer.'],
+  ['AI & Automation', '🤖', 'Belajar pakai AI untuk riset, coding, konten, workflow, dan eksperimen produk.'],
+  ['Vibe Coding', '⚡', 'Ngulik ide cepat, prototyping, prompt, agent coding, dan shipping project kecil.'],
+  ['Config 9 Router', '📡', 'Diskusi setup router, jaringan rumah/kantor kecil, troubleshooting, dan optimasi koneksi.'],
 ];
 
 const rules = [
@@ -82,9 +82,9 @@ const rules = [
     <section id="topik" class="mx-auto max-w-6xl px-6 py-16">
       <div class="max-w-2xl"><p class="font-semibold uppercase tracking-[0.16em] text-terracotta">Topik diskusi</p><h2 class="mt-3 font-display text-4xl font-bold md:text-5xl">Bukan kelas formal. Ini ruang ngobrol dan praktik.</h2></div>
       <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {topics.map(([title, body]) => (
+        {topics.map(([title, icon, body]) => (
           <article class="rounded-xl border border-border-warm bg-surface p-6 transition hover:-translate-y-1 hover:shadow-[0_4px_16px_rgba(28,25,23,0.06)]">
-            <div class="mb-5 size-10 rounded-lg bg-surface-container"></div>
+            <div class="mb-5 grid size-12 place-items-center rounded-xl bg-surface-container text-2xl shadow-[inset_0_0_0_1px_rgba(2,132,199,0.10)]" aria-hidden="true">{icon}</div>
             <h3 class="font-display text-2xl font-bold">{title}</h3>
             <p class="mt-3 text-text-secondary">{body}</p>
           </article>
